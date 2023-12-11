@@ -1,0 +1,31 @@
+curl -X POST \
+												https://www.sms.oftern.com/SMSApi/rest/send \
+  -H 'Accept: /' \
+  -H 'Accept-Encoding: gzip, deflate' \
+  -H 'Cache-Control: no-cache' \
+  -H 'Connection: keep-alive' \
+  -H 'Content-Length: 379' \
+  -H 'Content-Type: application/json' \
+  -H 'Cookie: SERVERID=webC1' \
+  -H 'Host: www.smsgateway.center' \
+  -H 'User-Agent: PostmanRuntime/7.20.1' \
+  -H 'cache-control: no-cache' \
+  -d '{
+  "ApiKey": "YourKey",
+  "password": "YourPassword",
+  "Success": "true",
+  "sms": [
+    {
+      "mobile": [01800000000],
+      "msg": "hello world"
+    },
+    {
+      "mobile": [01700000000],
+      "msg": "hello world again"
+    },
+    {
+      "mobile": [01600000000,01900000000],
+      "msg": "Final last msg"
+    }
+  ]
+}'
